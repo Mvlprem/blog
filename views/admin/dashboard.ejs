@@ -1,0 +1,28 @@
+<section class="admin-dashboard__header">
+  <h3>Admin Panel</h3>
+  <form action="/admin/log-out" method="GET">
+    <input type="submit" value="Logout" class="btn-delete btn" />
+  </form>
+</section>
+
+<div class="admin-title">
+  <h2>Posts</h2>
+  <a href="/admin/add-post" class="btn">+ Add New</a>
+</div>
+
+<ul class="admin-posts">
+  <% posts.forEach(post => { %>
+
+  <li>
+    <a href="<%= post.url %>"> <%= post.title %> &nearr; </a>
+    <div class="admin-post-controls">
+      <a href="/admin/edit-post/<%= post._id %>" class="btn">Edit</a>
+
+      <form action="/admin/delete-post/<%= post._id %>" method="POST">
+        <input type="submit" value="Delete" class="btn-delete btn" />
+      </form>
+    </div>
+  </li>
+
+  <% }) %>
+</ul>

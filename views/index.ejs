@@ -1,0 +1,24 @@
+<div class="author">
+  <h1 class="author__heading">Mvl Prem</h1>
+</div>
+
+<section class="articles">
+  <div class="articles__header">
+    <h2 class="articles__heading">Blog Posts</h2>
+    <a href="/admin/index">
+      <span>Admin panel &nearr;</span>
+    </a>
+  </div>
+
+  <ul class="article-ul">
+    <% posts.forEach(post => { %>
+    <li>
+      <a href="<%= post.url %>">
+        <h3 class="article-list__title"><%= post.title %></h3>
+      </a>
+      <p class="article-list__date"><%= post.publish__date %></p>
+      <p class="article-list__preview"><%= post.summary %></p>
+    </li>
+    <% }) %>
+  </ul>
+</section>

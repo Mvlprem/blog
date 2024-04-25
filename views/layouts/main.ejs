@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.svg" type="image/x-icon" />
+    <title><%= locals.title %></title>
+    <meta name="description" content="<%= locals.description %>" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script defer src="/js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main"><%- body %></main>
+      <%- include('../partials/footer.ejs') %>
+    </div>
+  </body>
+</html>
